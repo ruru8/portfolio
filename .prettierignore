@@ -1,0 +1,14 @@
+coverage/
+dist/
+/**/src/main.ts
+/**/src/polyfills.ts
+/**/src/test.ts
+
+/**/*.json
+
+registerServiceWorker.ts
+shims-tsx.d.ts
+shims-vue.d.ts
+babel.config.js
+package.json
+tsconfig.json
