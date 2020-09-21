@@ -9,14 +9,9 @@
   color: #2c3e50;
 
   /* Self Style */
-  overflow: auto;
   scroll-snap-type: y mandatory;
   height: 100vh;
-}
-
-h1 {
-  font-weight: normal;
-  margin-bottom: 30px;
+  overflow-y: auto;
 }
 
 .container {
@@ -24,7 +19,11 @@ h1 {
   height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding-top: 60px;
+}
+
+h1 {
+  font-weight: normal;
 }
 
 .box {
@@ -32,17 +31,18 @@ h1 {
     @media (max-width: 375px) {
       width: 100%;
     }
-    width: 300px;
+    width: 150px;
     color: white;
   }
   @mixin icon-background($color: white) {
     background: $color;
-    height: 300px;
-    width: 300px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
 
     display: flex;
     align-items: center;
+    margin: auto;
   }
 
   &-user {
@@ -55,5 +55,18 @@ h1 {
 
   &-pencil {
     @include icon-background(mediumaquamarine);
+  }
+}
+
+.fade {
+  animation: fadeIn 2s ease 0.1s 1 normal forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
